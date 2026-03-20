@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverFit Gym | Your fitness journey, available 24/7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-bolt"></i> EverFit
+            </a>
+            <div class="nav-links">
+                <a href="#plans">Planes</a>
+                <a href="#locations">Sedes</a>
+                <a href="#contact" class="btn btn-outline">Contacto</a>
+                <!-- Language Toggle -->
+                <button class="lang-toggle" onclick="toggleLanguage()">ES <i class="fa-solid fa-globe"></i></button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="#plans" onclick="toggleMobileMenu()">Planes</a>
+        <a href="#locations" onclick="toggleMobileMenu()">Sedes</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contacto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Your fitness journey, available 24/7.">
+                Your fitness journey, available 24/7.
+            </h1>
+            <p class="subtitle">Sin contratos de permanencia, sin excusas. Un espacio diseñado para adaptarse a tu ritmo de vida urbano en Bogotá.</p>
+            <div class="hero-buttons">
+                <a href="#plans" class="btn btn-primary glow-btn">
+                    Get Started / Empieza hoy
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3>Always Open</h3>
+                    <p>Entrena cuando quieras, el gimnasio nunca cierra.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-venus"></i>
+                    </div>
+                    <h3>Women's Priority</h3>
+                    <p>Zona exclusiva y segura para mujeres con equipamiento especializado.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </div>
+                    <h3>Top-Tier Equipment</h3>
+                    <p>Máquinas de última tecnología para cardio y fuerza.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                    </div>
+                    <h3>No Hidden Fees</h3>
+                    <p>$0 inscripción y $0 mantenimiento. Transparencia total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Plan</h2>
+                <p>Encuentra el plan perfecto para tu estilo de vida</p>
+            </div>
+            <div class="plans-grid">
+                <!-- Flexible Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Flexible <span class="badge">Monthly</span></h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">109</span>
+                            <span class="decimals">.000</span>
+                            <span class="period">/ mes</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Sin permanencia</li>
+                        <li><i class="fa-solid fa-check"></i> Acceso total 24/7</li>
+                        <li><i class="fa-solid fa-check"></i> Acceso a todas las sedes</li>
+                        <li><i class="fa-solid fa-check"></i> Clases grupales incluidas</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" onclick="selectPlan('Flexible')">Choose Plan</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="plan-card featured">
+                    <div class="popular-badge">Best Value</div>
+                    <div class="plan-header">
+                        <h3>Pro <span class="badge">Annual</span></h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">588</span>
+                            <span class="decimals">.000</span>
+                            <span class="period">/ pago único</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Precio preferencial</li>
+                        <li><i class="fa-solid fa-check"></i> Valoración física trimestral</li>
+                        <li><i class="fa-solid fa-check"></i> Invitado gratis 1 vez/mes</li>
+                        <li><i class="fa-solid fa-check"></i> Beneficios del plan Flexible</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" onclick="selectPlan('Pro Annual')">Choose Plan</a>
+                </div>
+
+                <!-- Night Owl Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Night Owl <span class="badge">Nocturno</span></h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">69</span>
+                            <span class="decimals">.000</span>
+                            <span class="period">/ mes</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check"></i> Acceso 11 PM a 5 AM</li>
+                        <li><i class="fa-solid fa-check"></i> Ideal para tranquilidad total</li>
+                        <li><i class="fa-solid fa-check"></i> Acceso a todas las sedes</li>
+                        <li><i class="fa-solid fa-check"></i> Sin cuota de inscripción</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" onclick="selectPlan('Night Owl')">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Animation Section -->
+    <section class="tech-focus">
+        <div class="container tech-container">
+            <div class="tech-content">
+                <div class="system-status">
+                    <span class="dot blink"></span> System Update Required
+                </div>
+                <h2>Es momento de hacer el <span class="highlight-cyan">'Update'</span> que tu cuerpo necesita.</h2>
+                <p class="tech-paragraph">
+                    Sabemos que pasas horas frente a la pantalla. En EverFit te ayudamos a resetear tu energía, mejorar tu postura y liberar el estrés del día. No dejes tu salud en <kbd>'Standby'</kbd>.
+                </p>
+                <div class="testimonial-card tech-glass">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="testimonial-text">"EverFit es el complemento perfecto para mi rutina de desarrollador. Poder ir a las 10 PM después de cerrar un proyecto es lo que me mantiene enfocado."</p>
+                    <div class="author">
+                        <div class="author-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                        <div class="author-info">
+                            <h4>Carlos R.</h4>
+                            <span>Backend Dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-visual">
+                <!-- Decorative CSS elements representing code/data flowing -->
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="mac-btn red"></span>
+                        <span class="mac-btn yellow"></span>
+                        <span class="mac-btn green"></span>
+                        <span class="window-title">body_update.sh</span>
+                    </div>
+                    <div class="window-body">
+                        <p><span class="prompt">></span> Executing health sequence...</p>
+                        <p><span class="prompt">></span> Posture error detected. Correcting...</p>
+                        <p class="success"><span class="prompt">></span> Energy levels restored.</p>
+                        <p><span class="prompt">></span> Ready for execution. <span class="cursor-blink">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations" id="locations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Encuentra tu sede EverFit</h2>
+                <p>Estamos en los puntos estratégicos de Bogotá: Chapinero, Cedritos, Colina y más. Diseñamos nuestras sedes para que siempre tengas una cerca de tu casa o trabajo.</p>
+            </div>
+            
+            <div class="location-controls">
+                <button class="btn btn-outline" onclick="requestLocation()"><i class="fa-solid fa-location-crosshairs"></i> Buscar cerca de mí</button>
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="locationSearch" placeholder="Escribe tu dirección, barrio o localidad..." onkeyup="filterLocations()">
+                </div>
+            </div>
+
+            <div class="locations-grid" id="locationsGrid">
+                <!-- Location cards generated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="trainers" id="trainers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conoce a tus Entrenadores</h2>
+                <p>Expertos listos para llevarte al siguiente nivel</p>
+            </div>
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <!-- Placeholder for high quality photo -->
+                        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Sarah - Trainer">
+                    </div>
+                    <h3>Sarah</h3>
+                    <p class="specialty">Specialist in High-Intensity Training.</p>
+                    <p class="description">Motivación pura.</p>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="David - Trainer">
+                    </div>
+                    <h3>David</h3>
+                    <p class="specialty">Bodybuilding & Strength Coach.</p>
+                    <p class="description">Técnica perfecta.</p>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Elena - Trainer">
+                    </div>
+                    <h3>Elena</h3>
+                    <p class="specialty">Yoga & Flexibility Expert.</p>
+                    <p class="description">Equilibrio mental y físico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>¿Tienes dudas?</h2>
+                <p>Déjanos un mensaje y un experto de nuestro equipo se pondrá en contacto contigo inmediatamente por WhatsApp.</p>
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Bogotá, Colombia</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>+57 300 000 0000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo</label>
+                        <input type="text" id="name" required placeholder="Ej: Carlos Rodriguez">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" required placeholder="correo@ejemplo.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="sede">Sede de interés</label>
+                        <select id="sede" required>
+                            <option value="">Selecciona una sede...</option>
+                            <option value="Chapinero">Chapinero</option>
+                            <option value="Cedritos">Cedritos</option>
+                            <option value="Colina">Colina</option>
+                            <option value="Chico">Chicó</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan">Plan de interés</label>
+                        <select id="plan">
+                            <option value="Sin definir">Sin definir</option>
+                            <option value="Flexible">Plan Flexible (Monthly)</option>
+                            <option value="Pro Annual">Plan Pro (Annual)</option>
+                            <option value="Night Owl">Plan Night Owl</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje o duda</label>
+                        <textarea id="message" rows="4" required placeholder="¿En qué te podemos ayudar?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">
+                        <i class="fa-brands fa-whatsapp"></i> Send Message / Enviar Mensaje
+                    </button>
+                    <p class="privacy-note">Tus datos están seguros. Al enviar, aceptas nuestra política de privacidad.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-bolt"></i> EverFit
+                </a>
+                <p>Tu camino al fitness, disponible 24/7. Adaptado al estilo de vida urbano de Bogotá.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col links-col">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fa-solid fa-map-pin"></i> Sede Principal: Calle 85 # 11-53, Bogotá</li>
+                    <li><i class="fa-solid fa-phone"></i> +57 (601) 555-5555</li>
+                    <li><i class="fa-solid fa-envelope"></i> support@everfit.com.co</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EverFit Gym. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
